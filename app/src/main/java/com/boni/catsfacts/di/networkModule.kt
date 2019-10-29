@@ -1,7 +1,7 @@
 package com.boni.catsfacts.di
 
 import com.boni.catsfacts.BuildConfig
-import com.boni.catsfacts.data.service.CatsFacts
+import com.boni.catsfacts.data.service.CatsFactsService
 import okhttp3.OkHttpClient
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -27,4 +27,4 @@ fun provideOkHttpClient(): OkHttpClient {
         .build()
 }
 
-fun provideFreeNowApi(retrofit: Retrofit): CatsFacts = retrofit.create(CatsFacts::class.java)
+fun provideFreeNowApi(retrofit: Retrofit): CatsFactsService = retrofit.create(CatsFactsService::class.java)
