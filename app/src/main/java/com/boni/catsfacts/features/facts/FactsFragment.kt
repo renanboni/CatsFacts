@@ -6,8 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.boni.catsfacts.R
+import org.koin.android.viewmodel.ext.android.viewModel
 
 class FactsFragment : Fragment() {
+
+    private val viewModel by viewModel<FactsViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -19,5 +22,10 @@ class FactsFragment : Fragment() {
             container,
             false
         )
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.doFactsRequest()
     }
 }
