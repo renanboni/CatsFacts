@@ -19,6 +19,13 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'URL_API', '"https://cat-fact.herokuapp.com/"'
+        }
+        debug {
+            versionNameSuffix "Debug"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'URL_API', '"https://cat-fact.herokuapp.com/"'
         }
     }
 }
