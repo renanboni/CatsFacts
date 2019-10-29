@@ -10,7 +10,6 @@ class FactsViewModel(private val catsFactsRepository: ICatsFactsRepository) : Vi
     fun doFactsRequest() {
         viewModelScope.launch {
             val cats = catsFactsRepository.getFacts()
-
         }
     }
 }
