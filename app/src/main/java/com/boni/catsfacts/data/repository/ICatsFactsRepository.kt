@@ -1,6 +1,7 @@
 package com.boni.catsfacts.data.repository
 
-interface ICatsFactsRepository {
+import com.boni.catsfacts.data.response.FactResponse
 
-    
+interface ICatsFactsRepository {
+    fun getFacts(): FactResponse
 }
