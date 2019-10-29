@@ -1,7 +1,8 @@
-package com.boni.catsfacts
+package com.boni.catsfacts.features
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.boni.catsfacts.R
 
 class MainActivity : AppCompatActivity() {
 
