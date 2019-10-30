@@ -7,12 +7,16 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.boni.catsfacts.R
+import com.boni.catsfacts.base.HasViewModel
 import kotlinx.android.synthetic.main.fragment_facts.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
-class FactsFragment : Fragment() {
+class FactsFragment : HasViewModel<FactsViewModel>, Fragment() {
 
-    private val viewModel by viewModel<FactsViewModel>()
+    private val factsViewModel by viewModel<FactsViewModel>()
+
+    override val viewModel: FactsViewModel
+        get() = factsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater,

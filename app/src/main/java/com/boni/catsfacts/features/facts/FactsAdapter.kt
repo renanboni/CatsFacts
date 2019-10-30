@@ -36,7 +36,7 @@ class FactsAdapter(private val facts: List<Fact>) : RecyclerView.Adapter<FactsAd
         fun bind(fact: Fact) {
             text.text = fact.text
             likes.text = fact.upvotes.toString()
-            author.text = "${fact.user.name.last}, ${fact.user.name.first}"
+            author.text = "${fact.user?.name?.last}, ${fact.user?.name?.first}"
         }
     }
 }
